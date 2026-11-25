@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="om">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gem Tap — Tapha Gems</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:linear-gradient(145deg,#101b3d,#39236b);font-family:system-ui,Arial,sans-serif;color:#fff;padding:18px}.card{width:min(440px,100%);background:#ffffff12;border:1px solid #ffffff30;border-radius:24px;padding:26px;text-align:center;box-shadow:0 18px 55px #0005}h1{margin:0 0 8px;font-size:2rem}.sub{color:#ddd;margin:0 0 22px}.score{font-size:1.2rem;background:#ffffff18;border-radius:14px;padding:14px;margin:18px 0}.gem{font-size:5rem;display:block;margin:18px auto;filter:drop-shadow(0 8px 12px #0005)}button{border:0;border-radius:14px;padding:14px 20px;font-size:1rem;font-weight:700;cursor:pointer}.tap{background:#ffd34e;color:#302044;width:100%;font-size:1.1rem}.reset{background:#ffffff20;color:white;margin-top:12px}.note{font-size:.85rem;line-height:1.5;color:#ddd;margin-top:20px}.msg{min-height:25px;color:#ffe58a;margin-top:12px}
+</style>
+</head>
+<body>
+<main class="card">
+<h1>💎 Gem Tap</h1>
+<p class="sub">Gems tuqi — qabxii walitti qabi!</p>
+<div class="score">Gems kee: <strong id="score">0</strong></div>
+<span class="gem" aria-hidden="true">💎</span>
+<button class="tap" id="tap">GEM TUQI! +1</button>
+<div class="msg" id="msg" aria-live="polite"></div>
+<button class="reset" id="reset">Irra deebi'i</button>
+<p class="note">Tapha bashannanaa qofa. Gems fi qabxiin kun maallaqa dhugaa miti; hin bitaman, hin gurguraman, gara Telebirr hin jijjiiraman. Maallaqa hin gaafatu.</p>
+</main>
+<script>
+let score=0;
+const scoreEl=document.getElementById('score');
+const msg=document.getElementById('msg');
+document.getElementById('tap').addEventListener('click',()=>{score++;scoreEl.textContent=score;msg.textContent='Gaarii! Gem tokko dabalatte.';});
+document.getElementById('reset').addEventListener('click',()=>{score=0;scoreEl.textContent=score;msg.textContent='Qabxiin haaromfame.';});
+</script>
+</body>
+</html>
